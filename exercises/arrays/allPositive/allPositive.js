@@ -13,10 +13,20 @@
  */
 function allPositive(array) {
   // This is your job. :)
+  for ( let element of array){
+    if ( element <= 0){ 
+      return false
+    }
+  }
+  return true
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for allPositive:');
+console.log( allPositive([2,5,7,8,6,4]) == true);
+console.log( allPositive([-2,5,7,8,6,4]) == false);
+console.log( allPositive([2,0,5,7,8,6,4]) == false);
+
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
