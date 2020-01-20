@@ -9,13 +9,21 @@
  * @returns {number} The sum of the numbers in the array
  */
 function sum(array) {
+  let runningTotal = 0;
+  for ( let num of array){
+    runningTotal += num;
+  }
+  return runningTotal;
   // This is your job. :)
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for sum:');
 
-  // Add your own sanity checks here.
+  console.log(sum([2,3,4,5])); // 14
+  console.log(sum([10,20,90,-100])); // 20
+
+    // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }
 
