@@ -14,12 +14,21 @@
  *   and false otherwise.
  */
 function anyPositive(array) {
+  for ( let element of array){
+    if ( element > 0){
+      return true
+    }
+  }
+  return false
   // This is your job. :)
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for anyPositive:');
 
+  console.log(anyPositive([1,2-3,6])=== true);
+  console.log(anyPositive([-1,-2-3,-6])=== false);
+  
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }
