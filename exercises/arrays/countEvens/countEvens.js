@@ -12,12 +12,20 @@
  * @returns {number} The count of even integers in the array
  */
 function countEvens(array) {
+  let evens = 0;
+  for ( let element of array) {
+    if ( element % 2 === 0){ 
+      evens +=1;
+    }
+  }
+  return evens
   // This is your job. :)
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for countEvens:');
-
+console.log(countEvens([2,3,5,8,10])); // 3
+console.log(countEvens([39,37,9,7,101])); // 0
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }
