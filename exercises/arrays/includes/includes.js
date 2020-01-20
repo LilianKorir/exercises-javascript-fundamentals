@@ -19,12 +19,19 @@
  * @returns {boolean} True if the array contains the value, false otherwise.
  */
 function includes(haystack, needle) {
+  for (let element of haystack){
+    if ( element === needle){
+      return true
+    }
+  }
+  return false
   // This is your job. :)
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for includes:');
-
+console.log(includes([ 45,43,30,], 50));
+console.log(includes([ 'tin','bin',30,], 'tin'));
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }
