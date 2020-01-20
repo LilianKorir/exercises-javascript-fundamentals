@@ -9,6 +9,11 @@
  * Conversely, `9` is not a power of `2` since there's no integer `k` such that `9 === 2**k`.
  *
  * @example
+ * 
+ * isPowerOf(2, 2) // => true
+ * isPowerOf(3, 3) // => true
+ * isPowerOf(10, 2) // => false
+ * 
  * isPowerOf(2) // => true
  * isPowerOf(3) // => false
  * isPowerOf(4) // => true
@@ -18,7 +23,13 @@
  * @param {number} num - The input number
  * @returns {boolean} True if input is a power of 2 and false otherwise.
  */
-function isPowerOf(num) {
+function isPowerOf(n, base) {
+  let exponent = 0
+  for (let exponent = 2; exponent++;)
+
+return base ** exponent === n;
+  
+
   // Your code here
   // Remember, you can assume that num is a positive integer.
 }
@@ -27,12 +38,14 @@ if (require.main === module) {
   console.log('Running sanity checks for isPowerOf:');
 
   // Is 0 a power of two? Is 1?
-  console.log(isPowerOf(0) === _____);
-  console.log(isPowerOf(1) === _____);
-
-  console.log(isPowerOf(2) === true);
-  console.log(isPowerOf(3) === false);
-  console.log(isPowerOf(4) === true);
+  //console.log(isPowerOf(0) === false);
+  //console.log(isPowerOf(1) === true);
+  //console.log(isPowerOf(2) === true);
+  //console.log(isPowerOf(3) === false);
+  //console.log(isPowerOf(4) === true);
+  console.log(isPowerOf(9, 2)) // true
+  console.log(isPowerOf(10, 3)) // => false
+  console.log(isPowerOf(1, 1)) // => true
 }
 
 module.exports = isPowerOf;
