@@ -11,6 +11,7 @@
  * @returns {number} The base raised to the power of the exopnent
  */
 function power(base, exponent) {
+  return base ** exponent;
   /*
     Your code goes here.
 
@@ -26,13 +27,16 @@ function power(base, exponent) {
 if (require.main === module) {
   console.log('Running sanity checks for power:');
 
-  console.log(power(1, 1) === 1);
-  console.log(power(1, 2) === 1);
+  console.log(power(1, 1)); //=== 1)
+  console.log(power(1, 2)); // === 1);
 
-  console.log(power(-1, 1) === -1);
-  console.log(power(-1, 2) === 1);
-  console.log(power(-1, 3) === -1);
+  console.log(power(-1, 1)); //=== -1);
+  console.log(power(-1, 2)); //=== 1);
+  console.log(power(-1, 3)); // === -1);
 
+  console.log(power(2, 4)); //=== 16)
+  console.log(power(0, 4)); //=== 0)
+  console.log(power(2, 0)); //=== 1)
   // Your sanity checks go here
   // What should happen if base is 0? If exponent is 0?
 }
