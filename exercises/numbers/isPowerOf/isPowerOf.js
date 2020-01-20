@@ -13,20 +13,14 @@
  * isPowerOf(2, 2) // => true
  * isPowerOf(3, 3) // => true
  * isPowerOf(10, 2) // => false
- * 
- * isPowerOf(2) // => true
- * isPowerOf(3) // => false
- * isPowerOf(4) // => true
- * isPowerOf(2**20) // => true
- * isPowerOf(2**20 + 1) // => false
+ 
  *
  * @param {number} num - The input number
  * @returns {boolean} True if input is a power of 2 and false otherwise.
  */
 function isPowerOf(n, base) {
   let exponent = 0
-  for (let exponent = 2; exponent++;)
-
+  for (let exponent = 0; exponent++;)
 return base ** exponent === n;
   
 
@@ -37,13 +31,8 @@ return base ** exponent === n;
 if (require.main === module) {
   console.log('Running sanity checks for isPowerOf:');
 
-  // Is 0 a power of two? Is 1?
-  //console.log(isPowerOf(0) === false);
-  //console.log(isPowerOf(1) === true);
-  //console.log(isPowerOf(2) === true);
-  //console.log(isPowerOf(3) === false);
-  //console.log(isPowerOf(4) === true);
-  console.log(isPowerOf(9, 2)) // true
+
+  console.log(isPowerOf(9, 2)) // false
   console.log(isPowerOf(10, 3)) // => false
   console.log(isPowerOf(1, 1)) // => true
 }
