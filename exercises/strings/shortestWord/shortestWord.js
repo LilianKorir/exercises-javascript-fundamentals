@@ -8,14 +8,35 @@
  */
 
 function shortestWord(string) {
-  // This is your job. :)
+  let Array = string.split(' ')
+  counter = 10000000
+  for ( let i of Array) { 
+if( i.length < counter){
+  counter = i.length
+
+  return i;
 }
+  }
+  
+      
+    }
+  
 
-if (require.main === module) {
-  console.log('Running sanity checks for shortestWord:');
+ 
+  
+  
+  
+    
+  
+  // This is your job. :)
 
+ if (require.main === module) {
+console.log('Running sanity checks for shortestWord:');
+
+console.log(shortestWord('Nakuru is the best city')); // is
+console.log(shortestWord('What school do you attend?')); //do
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
-}
 
+ }
 module.exports = shortestWord;
