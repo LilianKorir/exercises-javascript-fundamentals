@@ -10,7 +10,22 @@
  * @param {number} num - The positive integer whose primality we want to check
  * @returns {boolean} True if num is prime and false otherwise
  */
+
 function isPrime(num) {
+   if ( num === 1){
+      return false;}
+  
+      if ( num === 2){return true;}
+      
+    for ( let n = 2; n < num; n++){
+    if (num % n === 0){
+     return false;
+    }
+    return true;
+  }
+  
+  
+
   /*
     Your code goes here.
 
@@ -20,15 +35,16 @@ function isPrime(num) {
     and use pen/paper, index cards, etc. — anything that helps you think
     about it without getting stuck in JavaScript syntax.
   */
-}
 
+}
 if (require.main === module) {
   console.log('Running sanity checks for isPrime:');
 
   console.log(isPrime(1) === false);
-  console.log(isPrime(2) === true);
-  console.log(isPrime(4) === false);
-
+  console.log(isPrime(17) === true);
+  console.log(isPrime(8) === false);
+  console.log(isPrime(3) === true);
+  
   // Your own sanity checks go here
 }
 
