@@ -19,11 +19,24 @@
  * @returns {number} The median of the numbers in the array
  */
 function median(array) {
-  // This is your job. :)
-}
+  let newArr = array.sort()
+  console.log(newArr)
 
+  if(newArr.length % 2 > 0){
+    
+    let index = Math.floor(newArr.length/2)  
+    return newArr[index];
+  }else{
+let a = newArr[newArr.length/2]
+let b = newArr[(newArr.length/2) -1]
+    return (a+b)/2;
+
+}
+}
 if (require.main === module) {
   console.log('Running sanity checks for median:');
+  console.log(median([100,500,450 ])); // 450
+  console.log(median([600, -30, 900, 190])); // 395
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
