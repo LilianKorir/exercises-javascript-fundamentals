@@ -16,12 +16,28 @@
  *  array, or -1 if it's not found.
  */
 function firstIndexOf(haystack, needle) {
-  // This is your job. :)
+  for ( let element of haystack){
+    if (element === needle){
+      return haystack.indexOf(element);
+    }
+  }
+  return -1;
 }
+
+
+  
+
+
+
+  // This is your job. :)
+ 
 
 if (require.main === module) {
   console.log('Running sanity checks for firstIndexOf:');
-
+   
+  console.log(firstIndexOf(['h', 'o', 'j'], 'o')); // 1
+  console.log(firstIndexOf([9,8,7,6,9,4,3], 9)); //0
+  console.log(firstIndexOf([9,8,7,6,9,4,3], 90)); //0
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }
