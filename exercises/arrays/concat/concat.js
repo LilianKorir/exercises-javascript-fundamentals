@@ -22,11 +22,23 @@
  * @returns {object[]} The concatenation of the two given arrays
  */
 function concat(leftArray, rightArray) {
+  let finalArray = [];
+  for ( let element of leftArray){
+    finalArray.push(element);
+  }
+  for (let element of rightArray){
+    finalArray.push(element);
+  }
+  return finalArray;
   // This is your job. :)
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for concat:');
+  console.log(concat([34,45,76],['hi', 'there']));
+  console.log(concat(['Monday','Tuesday', 'Wednesday', 'Thurday', 'Friday'],['  weekend','its time to party!']));
+  
+  
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
