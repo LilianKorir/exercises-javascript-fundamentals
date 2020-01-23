@@ -15,12 +15,21 @@
  * @returns {number} The number of times the value appears in the array
  */
 function countValue(array, value) {
+  let count = 0
+  for( element of array){
+    if ( element === value){
+      count +=1;
+    }
+  }
+  return count;
   // This is your job. :)
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for countValue:');
-
+  console.log(countValue([1, 2, 3, 4, 5], 2)); // => 1
+  console.log(countValue(['new','year','resolutions','new', 'decade','is', 'new'], 'new')); // => 3
+  console.log(countValue([11, 23, 34, 11, 23, 43,], 23)); // => 2
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }
