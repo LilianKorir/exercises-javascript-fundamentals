@@ -19,11 +19,25 @@
  *  strictly less the given threshold
  */
 function selectShorterThan(array, threshold) {
+  let newArray = [];
+  for(element of array){
+    if (element.length < threshold){
+      newArray.push(element);
+    }
+  }
+  return newArray;
   // This is your job. :)
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for selectShorterThan:');
+  console.log(selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 0)); // => []
+ console.log(selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 1)); // => ['']
+ console.log(selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 2)); // => ['', 'c']
+ console.log(selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 3)); // => ['', 'bb', 'c']
+console.log(selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 4)); // => ['', 'aaa', 'bb', 'c']
+ console.log(selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 5)); // => ['', 'aaa', 'bb', 'c', 'dddd']
+ 
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
