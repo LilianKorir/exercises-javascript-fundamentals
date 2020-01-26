@@ -9,11 +9,17 @@
 
 function countWords(string) {
   // This is your job. :)
+let count = 0;
+  string = string.split(' ')
+  for (i of string){
+    count ++
+  }
+  return count;
 }
-
-if (require.main === module) {
+  if (require.main === module) {
   console.log('Running sanity checks for countWords:');
-
+console.log(countWords('I am very exited for whatever'));
+console.log(countWords('today is wednesday'));
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }
