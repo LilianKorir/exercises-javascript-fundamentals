@@ -8,6 +8,9 @@
  * @returns {boolean} True if a triangle exists with side lengths of a, b, and c. Returns false otherwise.
  */
 function isValidTriangle(a, b, c) {
+  if( a+b > c){ 
+    return true}
+    else {return false}
   /*
     Before you go Googling, get out a piece of paper and draw some triangles.
 
@@ -25,12 +28,15 @@ if (require.main === module) {
   console.log('Running sanity checks for isValidTriangle:');
 
   // The order of the arguments should not matter.
-  console.log(isValidTriangle(3, 4, 5) === true);
-  console.log(isValidTriangle(3, 5, 4) === true);
-  console.log(isValidTriangle(4, 3, 5) === true);
-  console.log(isValidTriangle(4, 5, 3) === true);
-  console.log(isValidTriangle(5, 3, 4) === true);
-  console.log(isValidTriangle(5, 4, 3) === true);
+  console.log(isValidTriangle(3, 4, 5));
+  console.log(isValidTriangle(3, 5, 4));
+  console.log(isValidTriangle(4, 3, 5));
+  console.log(isValidTriangle(4, 5, 3));
+  console.log(isValidTriangle(5, 3, 4));
+  console.log(isValidTriangle(5, 4, 3));
+  console.log(isValidTriangle(10,3,4));
+  console.log(isValidTriangle(3,4,10));
+  console.log(isValidTriangle(12,5,17));
 
   // Add your own sanity checks here. Test negative cases.
   // How else will you be sure your code does what you think it does?
