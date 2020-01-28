@@ -17,13 +17,25 @@
  *   and 12 for December.
  * @return {number} The number of days in the given month
  */
-function triangleType(monthNum) {
+function triangleType(a,b,c) {
+  if(a**2 + b**2 === c**2){
+    return 'right'
+  }
+  if ((a**2 + b**2) < c**2){
+    return 'obtuse'}
+  if ((a**2 + b**2) > c**2){
+      return 'acute'}
+      
   // This is your job. :)
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for triangleType:');
-
+  //c is the largest number
+console.log(triangleType(3,4,5));
+console.log(triangleType(64,144,225));
+console.log(triangleType(12,8,15));
+console.log(triangleType(4,3,5));
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }
