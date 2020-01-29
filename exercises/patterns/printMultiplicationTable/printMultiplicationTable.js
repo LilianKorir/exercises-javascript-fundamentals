@@ -21,6 +21,14 @@ let helpers = require('../printHelpers');
  * @param {number} n - The size of the multiplication table to print
  */
 function printMultiplicationTable(n) {
+  for (let i = 0; i < n; i++) {
+    let numChars = n;
+    let a = 1; a++;
+
+    helpers.printCountTimes('a', numChars);
+    helpers.printNewLine();
+  }
+
   /*
     This is your job. :)
 

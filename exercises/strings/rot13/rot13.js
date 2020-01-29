@@ -14,7 +14,7 @@
  * See https://en.wikipedia.org/wiki/ROT13
  *
  * Play with: https://rot13.com/
- *
+ * 
  * Because there are 26 letters in the alphabet, we can "decrypt" a
  * rot13-encrypted string by applying rot13 again.
  *
@@ -31,9 +31,16 @@
 function rot13(string) {
   // This is your job. :)
 }
+let sourceAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+let targetAlphabet = 'NOPQRSTUVWXYZABCDEFGHIJKLM';
+let output = '';
+for (input = sourceAlphabet){
+  let output = output + targetAlphabet.Indexof()
+}
 
 if (require.main === module) {
   console.log('Running sanity checks for rot13:');
+  console.log(rot13(HELLO));
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
