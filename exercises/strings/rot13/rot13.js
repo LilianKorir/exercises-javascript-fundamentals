@@ -34,10 +34,10 @@ function rot13(string) {
 let sourceAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let targetAlphabet = 'NOPQRSTUVWXYZABCDEFGHIJKLM';
 let output = '';
-for (input = sourceAlphabet){
+for (i = 0; i < input.length; i++){
   let output = output + targetAlphabet.Indexof()
 }
-
+return output;
 if (require.main === module) {
   console.log('Running sanity checks for rot13:');
   console.log(rot13(HELLO));
