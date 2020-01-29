@@ -40,9 +40,7 @@ function printSolidSquare(height) {
   }
 }
 
-/**
- * For testing purposes, prints a diagram of the given height.
- */
+/* For testing purposes, prints a diagram of the given height. */
 function solidSquarePrintTest(height) {
   console.log('');
   console.log(`Printing a SOLID SQUARE of height ${height}:`);
