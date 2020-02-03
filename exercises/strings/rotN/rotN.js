@@ -16,11 +16,30 @@
  */
 
 function rotN(string) {
+  let array = [];
+  
+  for ( i = 0; i <= string.length; i++){
+    let n = 0; n <= 13;  n++
+    if ( string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= (65+n)){
+      array.push(String.fromCharCode(string.charCodeAt(i)+ n));
+    }
+    else if (string.charCodeAt(i) >= (65+n) && string.charCodeAt(i)<= 90){
+      array.push(String.fromCharCode(string.charCodeAt(i) - n));
+    }
+    else { array.push(string[i]);
+    
+    }
+  }
+  return array.join('');
+  
   // This is your job. :)
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for rotN:');
+  console.log(rotN('NO WAY'));
+  console.log(rotN('SUPER BOWL 3'));
+  console.log(rotN('TECH ETHICS'));
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
