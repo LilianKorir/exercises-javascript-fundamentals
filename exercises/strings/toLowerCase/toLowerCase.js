@@ -16,11 +16,25 @@
  */
 
 function toLowerCase(string) {
+  let newstring = [];
+  for ( i = 0; i <= string.length; i++){
+    if ( string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 90){
+     newstring.push(String.fromCharCode(string.charCodeAt(i)+ 32));
+     
+    }
+else{
+  newstring.push(string[i]);
+  
+}
+}
+return newstring.join('');
   // This is your job. :)
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for toLowerCase:');
+  console.log(toLowerCase('Running sanity checks for toLowerCase:'));
+  console.log(toLowerCase('I LOVE ADJACENT'));
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
