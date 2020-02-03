@@ -28,19 +28,35 @@
  * @returns {string} A lowercase copy of the input string
  */
 
-function rot13(string) {
+function rot13(string) { 
+  let array = [];
+  for ( i = 0; i <= string.length; i++){
+    if ( string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 77){
+      array.push(String.fromCharCode(string.charCodeAt(i)+13));
+    }
+    else if (string.charCodeAt(i) >= 78 && string.charCodeAt(i)<= 90){
+      array.push(String.fromCharCode(string.charCodeAt(i) - 13));
+    }
+    else { array.push(string[i]);
+
+    }
+  }
+  return array.join('');
+  //document.write (array.join(''));
+}
   // This is your job. :)
-}
-let sourceAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-let targetAlphabet = 'NOPQRSTUVWXYZABCDEFGHIJKLM';
-let output = '';
-for (i = 0; i < input.length; i++){
-  let output = output + targetAlphabet.Indexof()
-}
-return output;
+
+  
+
+
+
+
 if (require.main === module) {
   console.log('Running sanity checks for rot13:');
-  console.log(rot13(HELLO));
+  console.log(rot13('I AM CANADIAN'));
+  console.log(rot13('DO YOU LIKE 1 WRITTING?'));
+  console.log(rot13('SAN FRANCISCO iS WARM'));
+
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
